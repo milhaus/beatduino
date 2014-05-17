@@ -10,13 +10,6 @@ const int xPin = 0;
 const int yPin = 1;
 const int zPin = 2;
 
-//The minimum and maximum values that came from
-//the accelerometer while standing still
-//You very well may need to change these
-int minVal = 265;
-int maxVal = 402;
-
-
 //to hold the caculated values
 double x;
 double y;
@@ -33,14 +26,6 @@ void loop(){
   int xRead = analogRead(xPin);
   int yRead = analogRead(yPin);
   int zRead = analogRead(zPin);
-
-  String outputt = "{\"x\":";
-  outputt += xRead;
-  outputt += ",\"y\":";
-  outputt += yRead;
-  outputt += ",\"z\":";
-  outputt += zRead;
-  outputt += "}";
   
   String tinyData = "";
   tinyData += xRead;
