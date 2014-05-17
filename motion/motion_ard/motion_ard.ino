@@ -34,15 +34,22 @@ void loop(){
   int yRead = analogRead(yPin);
   int zRead = analogRead(zPin);
 
-  String outputt = "{x:";
+  String outputt = "{\"x\":";
   outputt += xRead;
-  outputt += ",y:";
+  outputt += ",\"y\":";
   outputt += yRead;
-  outputt += ",z:";
+  outputt += ",\"z\":";
   outputt += zRead;
   outputt += "}";
   
-  Serial.println(outputt);
+  String tinyData = "";
+  tinyData += xRead;
+  tinyData += "|";
+  tinyData += yRead;
+  tinyData += "|";
+  tinyData += zRead;
+  
+  Serial.println(tinyData);
 
   delay(100);//just here to slow down the serial output - Easier to read
 }
