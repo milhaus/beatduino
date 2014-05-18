@@ -3,7 +3,7 @@
 var amqp = require('./beatduino_lib');
 var exec = require('child_process').exec;
 
-var kick = "wavs/KickDrum0006.aif";
+var kick = "wavs/tom.wav";
 var soSensitive = -.5;	// g force threshold for dance events
 
 function playrrr(){
@@ -13,8 +13,10 @@ function playrrr(){
 amqp.subscribe('motion', function(msg) {
   var x = msg.x, y = msg.y, z = msg.z, Gx = msg.Gx, Gy = msg.Gy, Gz = msg.Gz;
   
-  if (Gz > soSensitive) {
-	  console.log("Dance human! : " + typeof Gz);
+  down = Gz;
+  
+  if (Gx > soSensitive || Gy > soSensitive || Gz > soSensitive) {
+	  console.log("Dance human! : " + down);
 	  playrrr();
   }
 });
