@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var beatduino = require('./beatduino_lib.js');
+var beatduino = require('beatduino-helpers');
 var serialport = require("serialport");
 
 var sp = serialport.SerialPort;

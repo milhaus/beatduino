@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var amqp = require('./beatduino_lib');
+var amqp = require('beatduino-helpers');
 
 var bpm = 90;
 //var bpm = 105;

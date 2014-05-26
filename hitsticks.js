@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var amqp = require('./beatduino_lib');
+var amqp = require('beatduino-helpers');
 var exec = require('child_process').exec;
 
 var kick = "wavs/tom.wav";

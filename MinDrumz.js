@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var beatduino = require('./beatduino_lib.js');
+var beatduino = require('beatduino-helpers');
 var exec = require('child_process').exec;
 
 var KICKZ = ["wavs/KickDrum0007.aif", "wavs/KickDrum0006.aif", "wavs/TrpDrumz/808/808_18.wav", "wavs/TrpDrumz/808/SubBass1.wav", "wavs/KickDrum0013.aif"];
